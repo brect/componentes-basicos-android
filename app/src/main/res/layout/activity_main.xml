@@ -30,28 +30,30 @@
         android:id="@+id/btn_enviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:onClick="btnEnviar"
         android:text="Enviar"
+        app:layout_constraintBottom_toTopOf="@+id/resultado_produto"
         app:layout_constraintEnd_toEndOf="@+id/nome_produto"
-        app:layout_constraintStart_toStartOf="@+id/nome_produto"
-        app:layout_constraintTop_toBottomOf="@+id/nome_produto" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nome_produto" />
 
     <TextView
         android:id="@+id/resultado_produto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:text="Resultado"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_enviar"
-        app:layout_constraintStart_toStartOf="@+id/btn_enviar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_enviar" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/btn_enviar" />
 
     <CheckBox
         android:id="@+id/checkBox_cor_branco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:onClick="verificaCheckBox"
         android:text="Branco"
         app:layout_constraintStart_toStartOf="@+id/texto_cores"
         app:layout_constraintTop_toBottomOf="@+id/texto_cores" />
@@ -61,7 +63,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:onClick="verificaCheckBox"
         android:text="Verde"
         app:layout_constraintStart_toStartOf="@+id/checkBox_cor_branco"
         app:layout_constraintTop_toBottomOf="@+id/checkBox_cor_branco" />
@@ -71,7 +72,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:onClick="verificaCheckBox"
         android:text="Vermelho"
         app:layout_constraintStart_toStartOf="@+id/checkBox_cor_verde"
         app:layout_constraintTop_toBottomOf="@+id/checkBox_cor_verde" />
@@ -80,8 +80,45 @@
         android:id="@+id/texto_cores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Cores"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/btn_enviar"
-        app:layout_constraintTop_toBottomOf="@+id/resultado_produto" />
+        app:layout_constraintTop_toBottomOf="@+id/nome_produto" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Disponível em estoque"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/texto_cores"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_cor_vermelho" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_estoque"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_enviar"
+        app:layout_constraintEnd_toEndOf="@+id/nome_produto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nome_produto"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/radioButton_sim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sim" />
+
+        <RadioButton
+            android:id="@+id/radioButton_nao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Não" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
