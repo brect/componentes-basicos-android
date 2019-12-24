@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/nome_produto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Nome do Produto"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="btnEnviar"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="@+id/nome_produto"
+        app:layout_constraintStart_toStartOf="@+id/nome_produto"
+        app:layout_constraintTop_toBottomOf="@+id/nome_produto" />
+
+    <TextView
+        android:id="@+id/resultado_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Resultado"
+        app:layout_constraintEnd_toEndOf="@+id/btn_enviar"
+        app:layout_constraintStart_toStartOf="@+id/btn_enviar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enviar" />
+
+    <CheckBox
+        android:id="@+id/checkBox_cor_branco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="verificaCheckBox"
+        android:text="Branco"
+        app:layout_constraintStart_toStartOf="@+id/texto_cores"
+        app:layout_constraintTop_toBottomOf="@+id/texto_cores" />
+
+    <CheckBox
+        android:id="@+id/checkBox_cor_verde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="verificaCheckBox"
+        android:text="Verde"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_cor_branco"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_cor_branco" />
+
+    <CheckBox
+        android:id="@+id/checkBox_cor_vermelho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="verificaCheckBox"
+        android:text="Vermelho"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_cor_verde"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_cor_verde" />
+
+    <TextView
+        android:id="@+id/texto_cores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cores"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/btn_enviar"
+        app:layout_constraintTop_toBottomOf="@+id/resultado_produto" />
+</androidx.constraintlayout.widget.ConstraintLayout>
